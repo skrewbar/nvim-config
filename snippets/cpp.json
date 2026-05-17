@@ -1,0 +1,90 @@
+{
+  "C++ Template": {
+    "scope": "cpp",
+    "prefix": "init",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "int main() {",
+      "    ios::sync_with_stdio(false);",
+      "    cin.tie(nullptr);",
+      "",
+      "    $0",
+      "",
+      "    return 0;",
+      "}"
+    ],
+    "description": "C++ Competitive Programming Template"
+  },
+  "C++ multi testcase template": {
+    "scope": "cpp",
+    "prefix": "tcinit",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "void solve() {",
+      "    $0",
+      "}",
+      "",
+      "int main() {",
+      "    ios::sync_with_stdio(false);",
+      "    cin.tie(nullptr);",
+      "",
+      "    int t;",
+      "    cin >> t;",
+      "",
+      "    while (t--)",
+      "        solve();",
+      "",
+      "    return 0;",
+      "}"
+    ],
+    "description": "C++ Competitive Programming Template"
+  },
+  "all macro": {
+    "scope": "cpp",
+    "prefix": "allmac",
+    "body": "#define all(v) (v).begin(), (v).end()"
+  },
+  "compress macro": {
+    "scope": "cpp",
+    "prefix": "compmac",
+    "body": [
+      "#define compress(v) \\",
+      "    sort(all(v));   \\",
+      "    v.erase(unique(all(v)), (v).end())"
+    ]
+  },
+  "compare macro": {
+    "scope": "cpp",
+    "prefix": "bymac",
+    "body": [
+      "#define by(x) [](const auto& a, const auto& b) { return a.x < b.x; }",
+      "#define by_desc(x) [](const auto& a, const auto& b) { return a.x > b.x; }"
+    ]
+  },
+  "minheap macro": {
+    "scope": "cpp",
+    "prefix": "heapmac",
+    "body": [
+      "template <typename T>",
+      "using MinHeap = priority_queue<T, vector<T>, greater<T>>;"
+    ]
+  },
+  "minimize and maximize macro": {
+    "scope": "cpp",
+    "prefix": "mmac",
+    "body": [
+      "template <typename T>",
+      "bool minimize(T& target, T candidate) {",
+      "    return target > candidate ? (target = candidate, true) : false;",
+      "}",
+      "template <typename T>",
+      "bool maximize(T& target, T candidate) {",
+      "    return target < candidate ? (target = candidate, true) : false;",
+      "}"
+    ]
+  }
+}
