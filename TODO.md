@@ -8,7 +8,7 @@
 
 ## C++ Debug
 
-- [ ] Write launch.json file for C++ debug
+- [x] Write launch.json file for C++ debug
 
 ## Theme
 
