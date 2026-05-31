@@ -7,11 +7,11 @@ local mapping = {
 }
 
 --- @param colors ColorScheme
---- @param groups tokyonight.Highlights
---- @param opts tokyonight.Config
+--- @param groups pastel_pink.Highlights
+--- @param opts pastel_pink.Config
 function M.generate(colors, groups, opts)
   opts.plugins = { all = false, auto = false, treesitter = false }
-  local Groups = require("tokyonight.groups")
+  local Groups = require("pastel_pink.groups")
   for p, n in pairs(Groups.plugins) do
     if not p:find("nvim") then
       opts.plugins[n] = true

@@ -25,7 +25,7 @@ function M.get(c, opts)
     BlinkCmpSignatureHelpBorder = { fg = c.border_highlight, bg = c.bg_float },
   }
 
-  require("tokyonight.groups.kinds").kinds(ret, "BlinkCmpKind%s")
+  require("pastel_pink.groups.kinds").kinds(ret, "BlinkCmpKind%s")
   return ret
 end
 

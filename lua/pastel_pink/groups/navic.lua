@@ -9,7 +9,7 @@ function M.get(c, opts)
     NavicSeparator = { fg = c.fg, bg = c.none },
     NavicText      = { fg = c.fg, bg = c.none },
   }
-  require("tokyonight.groups.kinds").kinds(ret, "NavicIcons%s")
+  require("pastel_pink.groups.kinds").kinds(ret, "NavicIcons%s")
   return ret
 end
 

@@ -16,7 +16,7 @@ function M.get(c)
     NoiceCmdlinePopupTitleLua      = { fg = c.yellow },
     NoiceCompletionItemKindDefault = { fg = c.fg_dark, bg = c.none },
   }
-  require("tokyonight.groups.kinds").kinds(ret, "NoiceCompletionItemKind%s")
+  require("pastel_pink.groups.kinds").kinds(ret, "NoiceCompletionItemKind%s")
   return ret
 end
 

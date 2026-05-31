@@ -1,4 +1,4 @@
-local Util = require("tokyonight.util")
+local Util = require("pastel_pink.util")
 
 local M = {}
 
@@ -56,7 +56,7 @@ M.extras = {
 }
 
 function M.setup()
-  local tokyonight = require("tokyonight.theme")
+  local pastel_pink = require("pastel_pink.theme")
   vim.o.background = "dark"
 
   -- map of style to style name
@@ -74,9 +74,9 @@ function M.setup()
   -- tokyonight.setup({ plugins = { all = true } })
   for _, extra in ipairs(names) do
     local info = M.extras[extra]
-    local plugin = require("tokyonight.extra." .. extra)
+    local plugin = require("pastel_pink.extra." .. extra)
     for style, style_name in pairs(styles) do
-      local colors, groups, opts = tokyonight.setup({ style = style, plugins = { all = true } })
+      local colors, groups, opts = pastel_pink.setup({ style = style, plugins = { all = true } })
       local fname = extra
         .. (info.subdir and "/" .. info.subdir .. "/" or "")
         .. "/tokyonight"

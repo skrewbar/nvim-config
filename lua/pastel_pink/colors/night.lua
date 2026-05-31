@@ -1,4 +1,4 @@
-local ret = vim.deepcopy(require("tokyonight.colors.storm"))
+local ret = vim.deepcopy(require("pastel_pink.colors.storm"))
 
 ---@type Palette
 return vim.tbl_deep_extend("force", ret, {

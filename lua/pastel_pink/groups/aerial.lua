@@ -10,7 +10,7 @@ function M.get(c, opts)
     AerialGuide  = { fg = c.fg_gutter },
     AerialLine   = "LspInlayHint",
   }
-  require("tokyonight.groups.kinds").kinds(ret, "Aerial%sIcon")
+  require("pastel_pink.groups.kinds").kinds(ret, "Aerial%sIcon")
   return ret
 end
 

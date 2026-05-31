@@ -21,7 +21,7 @@ function M.get(c, opts)
     CmpItemMenu            = { fg = c.comment, bg = c.none },
   }
 
-  require("tokyonight.groups.kinds").kinds(ret, "CmpItemKind%s")
+  require("pastel_pink.groups.kinds").kinds(ret, "CmpItemKind%s")
   return ret
 end
 

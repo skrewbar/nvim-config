@@ -1,12 +1,12 @@
----@param opts tokyonight.Config
+---@param opts pastel_pink.Config
 return function(opts)
   local style = opts.light_style or "night"
   style = style == "day" and "night" or style
 
-  local Util = require("tokyonight.util")
+  local Util = require("pastel_pink.util")
 
   ---@type Palette
-  local colors = vim.deepcopy(Util.mod("tokyonight.colors." .. style))
+  local colors = vim.deepcopy(Util.mod("pastel_pink.colors." .. style))
 
   ---@type Palette
 
