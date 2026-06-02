@@ -11,6 +11,7 @@ return {
 
       run_command = {
         cpp = { exec = "./$(FNOEXT).out" },
+        python = { exec = "python3", args = { "$(FNAME)" } },
       },
     })
   end,
