@@ -3,6 +3,7 @@ return {
   opts = {
     display = {
       theme = "minecraft",
+      flavor = "accent",
     },
   },
 }
