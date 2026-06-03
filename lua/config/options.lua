@@ -6,7 +6,5 @@ vim.opt.spell = false
 
 vim.g.autoformat = false
 
-vim.g.lazyvim_mini_snippets_in_completion = true
-
 vim.g.lazyvim_ruby_lsp = "solargraph"
 vim.g.lazyvim_ruby_formatter = "rufo"
