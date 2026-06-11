@@ -6,5 +6,10 @@ vim.opt.spell = false
 
 vim.g.autoformat = false
 
+-- languages
+-- ruby
 vim.g.lazyvim_ruby_lsp = "solargraph"
 vim.g.lazyvim_ruby_formatter = "rufo"
+
+-- python
+vim.g.lazyvim_python_lsp = "basedpyright"
