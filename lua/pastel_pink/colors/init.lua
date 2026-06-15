@@ -3,11 +3,9 @@ local Util = require("pastel_pink.util")
 local M = {}
 
 ---@type table<string, Palette|fun(opts:pastel_pink.Config):Palette>
-M.styles = setmetatable({}, {
-  __index = function(_, style)
-    return vim.deepcopy(Util.mod("pastel_pink.colors." .. style))
-  end,
-})
+M.styles = {
+  pastel_pink = Util.mod("pastel_pink.colors.pastel_pink"),
+}
 
 ---@param opts? pastel_pink.Config
 function M.setup(opts)
