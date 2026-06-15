@@ -1,4 +1,4 @@
-local util = require("tokyonight.util")
+local util = require("pastel_pink.util")
 
 local M = {}
 
@@ -12,7 +12,6 @@ function M.generate(colors)
 assistant-output-color: "${fg}"
 
 # see the aider extra README for more information about setting the `code-theme`
-# https://github.com/folke/tokyonight.nvim/blob/extras/aider/README.md
 # code-theme: ${_pygments_plugin_name}
 
 completion-menu-color: "${fg_float}"

@@ -21,7 +21,7 @@ function M.generate(colors, groups, opts)
   local lines = {
     ([[
 hi clear
-let g:colors_name = "tokyonight-%s"
+let g:colors_name = "pastel-pink-%s"
   ]]):format(colors._style),
   }
 
@@ -83,7 +83,7 @@ let g:colors_name = "tokyonight-%s"
         used[name] = true
         lines[#lines + 1] = ("hi %s %s"):format(name, table.concat(props, " "))
       else
-        print("tokyonight: invalid highlight group: " .. name)
+        print("pastel-pink: invalid highlight group: " .. name)
       end
     end
   end

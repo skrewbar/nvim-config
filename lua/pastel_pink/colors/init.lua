@@ -11,9 +11,11 @@ M.styles = {
 function M.setup(opts)
   opts = require("pastel_pink.config").extend(opts)
 
-  Util.day_brightness = opts.day_brightness
-
   local palette = M.styles[opts.style]
+  if not palette then
+    opts.style = "pastel_pink"
+    palette = M.styles[opts.style]
+  end
   if type(palette) == "function" then
     palette = palette(opts) --[[@as Palette]]
   end

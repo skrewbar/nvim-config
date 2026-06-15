@@ -1,4 +1,4 @@
-local util = require("tokyonight.util")
+local util = require("pastel_pink.util")
 
 local M = {}
 
@@ -10,9 +10,8 @@ function M.generate(colors)
 
 ## name: ${_style_name}
 ## license: MIT
-## author: Folke Lemaitre
+## author: Pastel Pink
 ## upstream: ${_upstream_url}
-
 
 background ${bg}
 foreground ${fg}
@@ -25,40 +24,37 @@ cursor_text_color ${bg}
 # Tabs
 active_tab_background ${blue}
 active_tab_foreground ${bg_dark}
-inactive_tab_background ${bg_highlight}
-inactive_tab_foreground ${dark3}
-#tab_bar_background ${black}
+inactive_tab_background ${bg_dark}
+inactive_tab_foreground ${fg_dark}
+tab_bar_background ${bg_dark1}
 
 # Windows
 active_border_color ${blue}
 inactive_border_color ${bg_highlight}
+bell_border_color ${yellow}
 
-# normal
-color0 ${terminal.black}
-color1 ${terminal.red}
-color2 ${terminal.green}
-color3 ${terminal.yellow}
-color4 ${terminal.blue}
-color5 ${terminal.magenta}
-color6 ${terminal.cyan}
-color7 ${terminal.white}
+# Colors
+color0 ${black}
+color1 ${red}
+color2 ${green}
+color3 ${yellow}
+color4 ${blue}
+color5 ${magenta}
+color6 ${cyan}
+color7 ${fg_dark}
 
-# bright
-color8  ${terminal.black_bright}
-color9  ${terminal.red_bright}
-color10 ${terminal.green_bright}
-color11 ${terminal.yellow_bright}
-color12 ${terminal.blue_bright}
-color13 ${terminal.magenta_bright}
-color14 ${terminal.cyan_bright}
-color15 ${terminal.white_bright}
-
-# extended colors
-color16 ${orange}
-color17 ${red1}
+color8 ${terminal_black}
+color9 ${red}
+color10 ${green}
+color11 ${yellow}
+color12 ${blue}
+color13 ${magenta}
+color14 ${cyan}
+color15 ${fg}
 ]],
     colors
   )
+
   return kitty
 end
 

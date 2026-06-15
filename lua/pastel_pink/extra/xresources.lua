@@ -1,4 +1,4 @@
-local util = require("tokyonight.util")
+local util = require("pastel_pink.util")
 
 local M = {}
 
@@ -6,7 +6,7 @@ local M = {}
 function M.generate(colors)
   local xr = util.template(
     [[
-! TokyoNight colors for Xresources
+! Pastel Pink colors for Xresources
 
 *background: ${bg}
 *foreground: ${fg}

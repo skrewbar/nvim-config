@@ -1,4 +1,4 @@
-local util = require("tokyonight.util")
+local util = require("pastel_pink.util")
 
 local M = {}
 
@@ -11,45 +11,19 @@ function M.generate(colors)
   return sublime
 end
 
--- vim.schedule(function()
---   local config = require("tokyonight.config")
---   config.setup({ style = "storm" })
---   local colors = require("tokyonight.colors").setup()
---
---   local lookup = {}
---
---   local function process(cc, parent)
---     for k, v in pairs(cc) do
---       if type(v) == "string" then
---         if v:sub(1, 1) == "#" then
---           lookup[v] = (parent and (parent .. ".") or "") .. k
---         end
---       else
---         process(v, (parent and (parent .. ".") or "") .. k)
---       end
---     end
---   end
---   process(colors)
---   for c, n in pairs(lookup) do
---     M.template = M.template:gsub(c, "${" .. n .. "}")
---   end
---   d(lookup)
---   vim.notify(M.template)
--- end)
-
 -- Largely based off https://github.com/enkia/enki-theme
 M.template = [[
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>author</key>
-	<string>Folke Lemaitre (http://github.com/folke)</string>
+	<string>Pastel Pink</string>
 	<key>colorSpaceName</key>
 	<string>sRGB</string>
 	<key>name</key>
-	<string>TokyoNight</string>
+	<string>Pastel Pink</string>
 	<key>semanticClass</key>
-	<string>enki.theme.tokyo</string>
+	<string>enki.theme.pastel_pink</string>
 	<key>settings</key>
 	<array>
 		<dict>
@@ -167,7 +141,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#9aa5ce</string>
+				<string>${fg_dark}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -351,7 +325,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#ba3c97</string>
+				<string>${magenta2}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -384,7 +358,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#7DCFFF</string>
+				<string>${cyan}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -639,7 +613,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#fc7b7b</string>
+				<string>${red_desaturated}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -672,7 +646,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#9abdf5</string>
+				<string>${blue5}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1079,7 +1053,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#9abdf5</string>
+				<string>${blue5}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1090,7 +1064,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#9abdf5</string>
+				<string>${blue5}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1112,7 +1086,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#9aa5ce</string>
+				<string>${fg_dark}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1134,7 +1108,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#4E5579</string>
+				<string>${dark3}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1160,7 +1134,7 @@ M.template = [[
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>#61bdf2</string>
+				<string>${blue1}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1186,7 +1160,7 @@ M.template = [[
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>#6d91de</string>
+				<string>${blue2}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1199,7 +1173,7 @@ M.template = [[
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>#9aa5ce</string>
+				<string>${fg_dark}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1212,7 +1186,7 @@ M.template = [[
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>#747ca1</string>
+				<string>${dark5}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1273,7 +1247,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#4e5579</string>
+				<string>${dark3}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1319,7 +1293,7 @@ M.template = [[
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>#444b6a</string>
+				<string>${fg_gutter}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1330,7 +1304,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#c0cefc</string>
+				<string>${blue1}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1352,7 +1326,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#ffdb69</string>
+				<string>${warning}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1363,7 +1337,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${red1}</string>
+				<string>${error}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1374,7 +1348,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#b267e6</string>
+				<string>${purple}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1415,7 +1389,6 @@ M.template = [[
 	<string>06f855e3-9fb7-4fb1-b790-aef06065f34e</string>
 </dict>
 </plist>
-
 ]]
 
 return M

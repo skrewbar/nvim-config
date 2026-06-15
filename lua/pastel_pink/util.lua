@@ -2,7 +2,6 @@ local M = {}
 
 M.bg = "#000000"
 M.fg = "#ffffff"
-M.day_brightness = 0.3
 
 local uv = vim.uv or vim.loop
 
@@ -62,7 +61,7 @@ function M.invert(color)
       local hsl = hsluv.hex_to_hsluv(color)
       hsl[3] = 100 - hsl[3]
       if hsl[3] < 40 then
-        hsl[3] = hsl[3] + (100 - hsl[3]) * M.day_brightness
+        hsl[3] = hsl[3] + (100 - hsl[3]) * 0.3
       end
       return hsluv.hsluv_to_hex(hsl)
     end
@@ -162,9 +161,7 @@ function M.cache.write(key, data)
 end
 
 function M.cache.clear()
-  for _, style in ipairs({ "storm", "day", "night", "moon", "pastel_pink" }) do
-    uv.fs_unlink(M.cache.file(style))
-  end
+  uv.fs_unlink(M.cache.file("pastel_pink"))
 end
 
 return M

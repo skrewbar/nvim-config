@@ -1,4 +1,4 @@
-local util = require("tokyonight.util")
+local util = require("pastel_pink.util")
 
 local M = {}
 
@@ -7,7 +7,7 @@ function M.generate(colors)
   local alacritty = util.template(
     [=[
 # -----------------------------------------------------------------------------
-# TokyoNight Alacritty Colors
+# Pastel Pink Alacritty Colors
 # Theme: ${_style_name}
 # Upstream: ${_upstream_url}
 # -----------------------------------------------------------------------------

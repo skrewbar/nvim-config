@@ -59,39 +59,26 @@ function M.setup()
   local pastel_pink = require("pastel_pink.theme")
   vim.o.background = "dark"
 
-  -- map of style to style name
-  local styles = {
-    storm = " Storm",
-    night = "",
-    day = " Day",
-    moon = " Moon",
-  }
-
   ---@type string[]
   local names = vim.tbl_keys(M.extras)
   table.sort(names)
 
-  -- tokyonight.setup({ plugins = { all = true } })
   for _, extra in ipairs(names) do
     local info = M.extras[extra]
     local plugin = require("pastel_pink.extra." .. extra)
-    for style, style_name in pairs(styles) do
-      local colors, groups, opts = pastel_pink.setup({ style = style, plugins = { all = true } })
-      local fname = extra
-        .. (info.subdir and "/" .. info.subdir .. "/" or "")
-        .. "/tokyonight"
-        .. (info.sep or "_")
-        .. style
-        .. "."
-        .. info.ext
-      fname = string.gsub(fname, "%.$", "") -- remove trailing dot when no extension
-      colors["_upstream_url"] = "https://github.com/folke/tokyonight.nvim/raw/main/extras/" .. fname
-      colors["_style_name"] = "Tokyo Night" .. style_name
-      colors["_name"] = "tokyonight_" .. style
-      colors["_style"] = style
-      print("[write] " .. fname)
-      Util.write("extras/" .. fname, plugin.generate(colors, groups, opts))
-    end
+    local colors, groups, opts = pastel_pink.setup({ style = "pastel_pink", plugins = { all = true } })
+    local fname = extra
+      .. (info.subdir and "/" .. info.subdir .. "/" or "")
+      .. "/pastel-pink"
+      .. "."
+      .. info.ext
+    fname = string.gsub(fname, "%.$", "") -- remove trailing dot when no extension
+    colors["_upstream_url"] = "local pastel-pink theme"
+    colors["_style_name"] = "Pastel Pink"
+    colors["_name"] = "pastel_pink"
+    colors["_style"] = "pastel_pink"
+    print("[write] " .. fname)
+    Util.write("extras/" .. fname, plugin.generate(colors, groups, opts))
   end
 end
 M.setup()
