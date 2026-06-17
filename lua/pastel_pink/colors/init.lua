@@ -81,22 +81,22 @@ function M.setup(opts)
   -- stylua: ignore
   --- @class TerminalColors
   colors.terminal = {
-    black          = colors.black,
-    black_bright   = colors.terminal_black,
-    red            = colors.red,
-    red_bright     = Util.brighten(colors.red),
-    green          = colors.green,
-    green_bright   = Util.brighten(colors.green),
-    yellow         = colors.yellow,
-    yellow_bright  = Util.brighten(colors.yellow),
-    blue           = colors.blue,
-    blue_bright    = Util.brighten(colors.blue),
-    magenta        = colors.magenta,
-    magenta_bright = Util.brighten(colors.magenta),
-    cyan           = colors.cyan,
-    cyan_bright    = Util.brighten(colors.cyan),
-    white          = colors.fg_dark,
-    white_bright   = colors.fg,
+    black          = "#272222",
+    black_bright   = "#7a6a6a",
+    red            = "#ff8787",
+    red_bright     = "#ffaeae",
+    green          = "#83ff99",
+    green_bright   = "#aeffbb",
+    yellow         = "#ffeb86",
+    yellow_bright  = "#fff5b0",
+    blue           = "#8bd1ff",
+    blue_bright    = "#abdcff",
+    magenta        = "#ff7ca6",
+    magenta_bright = "#ffb9ce",
+    cyan           = "#80ffd2",
+    cyan_bright    = "#abffe3",
+    white          = "#cbbebe",
+    white_bright   = "#ffeeee",
   }
 
   opts.on_colors(colors)

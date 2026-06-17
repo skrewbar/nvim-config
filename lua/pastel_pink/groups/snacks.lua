@@ -36,8 +36,8 @@ function M.get(c, opts)
     SnacksDashboardHeader     = { fg = c.pink_light, bold = true },
     SnacksDashboardTitle      = { fg = c.pink_light, bold = true },
     SnacksDashboardIcon       = { fg = c.pink },
-    SnacksDashboardKey        = { fg = c.rose },
-    SnacksDashboardSpecial    = { fg = c.pink_light },
+    SnacksDashboardKey        = { fg = c.pink },
+    SnacksDashboardSpecial    = { fg = c.cyan },
     SnacksDashboardDir        = { fg = c.pink_deep },
     SnacksDashboardTerminal   = "SnacksDashboardNormal",
     -- Profiler
