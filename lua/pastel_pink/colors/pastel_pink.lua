@@ -24,8 +24,8 @@ return {
   green1 = "#b9f0d0",
   green2 = "#9fd9c2",
 
-  magenta = "#ffb8b8",
-  magenta2 = "#ff969c",
+  magenta = "#ff7ca6",
+  magenta2 = "#ff5d95",
   orange = "#ffd1b3",
   purple = "#edc6ff",
   red = "#ff6b82",
@@ -45,7 +45,7 @@ return {
   pink_light = "#ffd1d6",
   pink_deep = "#ff9db0",
   pink_pastel = "#ffc8d2",
-  rose = "#ff969c",
+  rose = "#ff9abb",
   blush = "#ffebeb",
 
   -- token-specific colors from VSCode pastel-pink theme
