@@ -1,5 +1,7 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 if vim.g.vscode then
+  vim.opt.clipboard = "unnamedplus"
+
   vim.o.cmdheight = 999
 
   vim.opt.number = true
