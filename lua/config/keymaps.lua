@@ -10,7 +10,7 @@ local build_commands = {
     vim.cmd("write")
 
     vim.fn.jobstart({
-      "g++-15",
+      "g++-16",
       "-std=gnu++23",
       "-Wall",
       "-g",

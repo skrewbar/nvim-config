@@ -7,7 +7,7 @@ return {
 
       compile_command = {
         cpp = {
-          exec = "g++-15",
+          exec = "g++-16",
           args = {
             "-std=gnu++23",
             "-Wall",
