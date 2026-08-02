@@ -2,6 +2,8 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+local cpp = require("config.helper.cpp")
+
 local build_commands = {
   cpp = function()
     local file = vim.fn.expand("%:p")
@@ -10,7 +12,7 @@ local build_commands = {
     vim.cmd("write")
 
     vim.fn.jobstart({
-      "g++-16",
+      cpp.compiler(),
       "-std=gnu++23",
       "-Wall",
       "-g",

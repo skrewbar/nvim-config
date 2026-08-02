@@ -2,12 +2,14 @@ return {
   "xeluxee/competitest.nvim",
   dependencies = "MunifTanjim/nui.nvim",
   config = function()
+    local cpp = require("config.helper.cpp")
+
     require("competitest").setup({
       testcases_use_single_file = true,
 
       compile_command = {
         cpp = {
-          exec = "g++-16",
+          exec = cpp.compiler(),
           args = {
             "-std=gnu++23",
             "-Wall",
