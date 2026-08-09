@@ -2,8 +2,8 @@
 
 ## Code Snippets
 
-- [ ] Add workspace-only code snippets
-- [ ] Remove embedded code snippets
+- [x] Add workspace-only code snippets
+- [x] Remove embedded code snippets
 - [x] Add global code snippets
 
 ## C++ Debug
