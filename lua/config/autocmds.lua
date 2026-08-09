@@ -8,13 +8,6 @@
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "markdown", "text" },
-  callback = function()
-    vim.opt_local.spell = false
-  end,
-})
-
-vim.api.nvim_create_autocmd("FileType", {
   pattern = { "cpp" },
   callback = function()
     vim.opt_local.shiftwidth = 4
