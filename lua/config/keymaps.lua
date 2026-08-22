@@ -54,3 +54,7 @@ vim.keymap.set("n", "<leader>cb", function()
     vim.notify("No build command for filetype: " .. ft, vim.log.levels.WARN)
   end
 end, { desc = "Build current file" })
+
+vim.api.nvim_create_user_command("Dashboard", function()
+  Snacks.dashboard({ win = vim.api.nvim_get_current_win() })
+end, { desc = "Open dashboard in current window" })
