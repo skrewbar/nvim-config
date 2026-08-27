@@ -21,3 +21,11 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- disable check for spell in text filetypes
+vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "text", "plaintex", "typst", "gitcommit", "markdown" },
+  callback = function()
+    vim.opt_local.wrap = true
+  end,
+})
