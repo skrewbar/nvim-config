@@ -56,5 +56,6 @@ vim.keymap.set("n", "<leader>cb", function()
 end, { desc = "Build current file" })
 
 vim.api.nvim_create_user_command("Dashboard", function()
+  ---@diagnostic disable-next-line: missing-fields
   Snacks.dashboard({ win = vim.api.nvim_get_current_win() })
 end, { desc = "Open dashboard in current window" })
