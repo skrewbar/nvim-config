@@ -42,6 +42,12 @@ return {
           args = { "-std=gnu++23", "-O2", "-o", "$bin", "$src" },
         },
       },
+      ruby = {
+        run = {
+          exec = "ruby",
+          args = { "$src" }
+        },
+      },
     },
   },
 }
