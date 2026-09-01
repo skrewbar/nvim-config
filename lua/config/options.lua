@@ -3,6 +3,8 @@
 -- Add any additional options here
 
 vim.g.autoformat = false
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 
 -- languages
 -- ruby
