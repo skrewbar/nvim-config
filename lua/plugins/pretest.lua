@@ -31,6 +31,7 @@ return {
           },
         },
       },
+      companion = { problem_path = "{cwd}/{file}.{ext}" },
     },
   },
   {
