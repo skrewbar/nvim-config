@@ -12,7 +12,16 @@ return {
         cpp = {
           compile = {
             exec = "g++-16",
-            args = { "-std=gnu++23", "-O2", "-o", "$bin", "$src" },
+            args = {
+              "-std=gnu++23",
+              "-D_GLIBCXX_DEBUG",
+              "-Wall",
+              "-g",
+              "-O0",
+              "-o",
+              "$bin",
+              "$src",
+            },
           },
         },
         ruby = {
