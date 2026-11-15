@@ -6,6 +6,8 @@ vim.g.autoformat = false
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 
+vim.opt.title = true
+
 -- languages
 -- ruby
 vim.g.lazyvim_ruby_lsp = "solargraph"
